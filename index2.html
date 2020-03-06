@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login Page</title>
+   <style>
+button {
+  background-color: lightblue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+
+}
+       h2
+       {
+            font-style: oblique;
+       }
+input  {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+      
+ table {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+   transform: translate(-50%, -50%);
+   }
+ body  {
+ //background-image: url("avatar.png");
+  background-color: lightgrey;
+}
+</style>
+</head>
+<body>
+    <h2>Follow the customer; if you change — we change </h2>
+      <form action="/" method="post">
+<table>
+    <tr><td> <img src="avatar.png" width="200" height="100"></td></tr>
+    
+    <tr>
+          <td>
+      <label > Username</label>
+         </td> 
+    </tr>
+    <tr>
+         <td> 
+             <input type="text" placeholder="Enter Username"  value="" required/>
+         </td> 
+    </tr>
+
+
+     <tr>
+          <td>
+      <label> Password</label>
+         </td> 
+    </tr>
+     <tr>
+         <td> 
+             <input type="password" placeholder="Enter Password"  value="" required/>
+         </td> 
+    </tr>
+    <tr>
+        <td>
+     <button type="submit">Login</button>
+       </td> 
+
+    </tr>
+    <tr>
+        <td> 
+     <label>
+      <input type="checkbox" checked="checked" name="remember">Remember me
+    </label>  
+        </td>
+     </tr>
+ </table>
+          </form>
+</body>
+</html>
