@@ -1,0 +1,136 @@
+﻿<%@ Master Language="C#" %>
+
+<!DOCTYPE html>
+
+<script runat="server">
+
+    
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        string username = "";
+        if (Request.Cookies["userInfo"] != null)
+            username = Request.Cookies["userInfo"].Values["usern"];
+
+        lblmsg.Text = "Welcome " + username + " to Rose Hotel!!";
+
+
+    }
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            height: 652px;
+        }
+        .auto-style2 {
+            height: 31px;
+        }
+        .auto-style3 {
+            width: 100%;
+            height: 243px;
+        }
+        .auto-style4 {
+            width: 235px;
+            height: 166px;
+        }
+        .auto-style5 {
+            width: 100%;
+            height: 32px;
+            margin-bottom: 0px;
+        }
+        .auto-style6 {
+            width: 242px;
+        }
+        .auto-style7 {
+            height: 405px;
+        }
+        .auto-style8 {
+            height: 111px;
+        }
+        .auto-style9 {
+            height: 166px;
+        }
+        .auto-style10 {
+            height: 28px;
+        }
+        .auto-style11 {
+            width: 297px;
+        }
+        .auto-style13 {
+            width: 189px;
+        }
+        .auto-style14 {
+            width: 256px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server" style="background-position: center center; background-size: cover;
+ background-image: url('image/image.jpg');" >
+    <div>
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style8">
+                    <table class="auto-style3">
+                        <tr>
+                            <td class="auto-style4">
+                                <asp:Label ID="Label2" runat="server" Font-Names="Harrington" Font-Size="60px" Font-Bold="True" Font-Overline="False" Height="137px" Width="367px" ForeColor="White">Rose Hotels</asp:Label>
+                            </td>
+                            <td class="auto-style9">
+                                <marquee direction="left" scrollamount="5">
+                                <asp:Label ID="lblmsg" runat="server" Font-Size="60px" ForeColor="White">
+
+                                 </asp:Label></marquee
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style10">
+                    <table class="auto-style5">
+                        <tr>
+                            <td class="auto-style6">
+                                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/userhome.aspx" Font-Bold="True" Font-Size="Large" ForeColor="White">UserPage</asp:HyperLink>
+                            </td>
+                            <td class="auto-style11">
+                                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/EditProfile.aspx" Font-Bold="True" Font-Size="Large" ForeColor="White">EditProfile</asp:HyperLink>
+                            </td>
+                            <td class="auto-style14">
+                                <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/ChangePassword.aspx" Font-Bold="True" Font-Size="Large" ForeColor="White">Change Password</asp:HyperLink>
+                            </td>
+                            <td class="auto-style13">
+                                <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Booking.aspx" Font-Bold="True" Font-Size="Large" ForeColor="White">Booking</asp:HyperLink>
+                            </td>
+                            <td>&nbsp;</td>
+                            <td>
+                                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/SignOut.aspx" Font-Bold="True" Font-Size="Large" ForeColor="White">Sign out</asp:HyperLink>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style7" style="vertical-align: top">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2"><CENTER style="height: 95px; width: 1526px;">
+<FONT FACE="Arial" COLOR="midnightblue" size = "-1">
+Powered BY FUE Team Spring 2020 &copy; 2020  <A href="">contact webmaster</A>
+</FONT>
+</CENTER></td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
